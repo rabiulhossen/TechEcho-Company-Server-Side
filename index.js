@@ -34,7 +34,8 @@ async function run (){
           const partCollection = client.db('computerManufacturer').collection('parts');
 
 
-          // for parts show 
+         
+           //  for review show 
 
           app.get('/reviews',async (req,res)=>{
 
@@ -44,7 +45,7 @@ async function run (){
                 res.send(review);
            });
 
-          //  for review show 
+          // for parts show 
 
           app.get('/parts',async (req,res)=>{
 
@@ -54,6 +55,17 @@ async function run (){
                 res.send(part);
            });
 
+
+//    post 
+app.post('/reviews',async(req,res)=>{
+     const newUser =req.body;
+     console.log("new user",newUser);
+     const result =await reviewCollection.insertOne(newUser);
+     res.send(result);
+ })
+
+
+           
      }
 
 
@@ -73,8 +85,3 @@ app.listen(port,()=>{
 
 
 
-
-
-
-// USER_NAME=Rabiulhossen
-// USER_PASS=Hidnj4KDLQPIZhi1
