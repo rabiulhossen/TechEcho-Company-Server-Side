@@ -76,6 +76,14 @@ async function run (){
                res.send(detailProduct)
            
            })
+           app.get('/orders/:id', async(req,res) =>{
+               const id= req.params.id;
+               console.log(id);
+               const query ={_id:ObjectId(id)}
+               const orderProduct =await orderCollection.findOne(query);
+               res.send(orderProduct)
+           
+           })
 
 
           // for parts show 
@@ -105,6 +113,18 @@ const {email,} =newUser
      console.log("new user",newUser);
      const result =await orderCollection.insertOne(newUser);
      const complete = await reviewCollection.updateOne
+     res.send(result);
+
+
+ })
+app.get('/orders',async(req,res)=>{
+     
+     const query ={_id:ObjectId(id)}
+     const newUser =req.body;
+const {email} =newUser
+     console.log("new user",newUser);
+     const result =await orderCollection.findOne(newUser);
+    
      res.send(result);
  })
 
