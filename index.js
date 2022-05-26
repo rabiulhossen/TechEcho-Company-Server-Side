@@ -33,6 +33,9 @@ async function run (){
           await client.connect();
           const partCollection = client.db('computerManufacturer').collection('parts');
 
+          await client.connect();
+          const orderCollection = client.db('computerManufacturer').collection('orders');
+
 
          
            //  for review show 
@@ -45,6 +48,18 @@ async function run (){
                 res.send(review);
            });
 
+// for details product 
+
+           app.get('/parts/:id', async(req,res) =>{
+               const id= req.params.id;
+               console.log(id);
+               const query ={_id:ObjectId(id)}
+               const detailProduct =await partCollection.findOne(query);
+               res.send(detailProduct)
+           
+           })
+
+
           // for parts show 
 
           app.get('/parts',async (req,res)=>{
@@ -56,11 +71,22 @@ async function run (){
            });
 
 
-//    post 
+//    post {add review}
+
 app.post('/reviews',async(req,res)=>{
      const newUser =req.body;
      console.log("new user",newUser);
      const result =await reviewCollection.insertOne(newUser);
+     res.send(result);
+ })
+app.post('/orders',async(req,res)=>{
+     
+     const query ={_id:ObjectId(id)}
+     const newUser =req.body;
+const {email,} =newUser
+     console.log("new user",newUser);
+     const result =await orderCollection.insertOne(newUser);
+     const complete = await reviewCollection.updateOne
      res.send(result);
  })
 
