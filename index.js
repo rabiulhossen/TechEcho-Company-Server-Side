@@ -48,6 +48,24 @@ async function run (){
                 res.send(review);
            });
 
+
+          app.get('/reviews',async (req,res)=>{
+
+               const email =req.query.email;
+
+               const query = {email:email}
+               const cursor = reviewCollection.find(query);
+               const review = await cursor.toArray();
+                res.send(review);
+           });
+
+
+
+
+
+
+
+
 // for details product 
 
            app.get('/parts/:id', async(req,res) =>{

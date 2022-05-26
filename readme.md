@@ -1,6 +1,6 @@
 # THIS IS MANUFECTURER COMPANY SERVER SIDE...
 
-This project was Boosted with [firebase deploy](https://github.com/facebook/create-react-app).
+# [netlify deploy](https://meek-treacle-5beccb.netlify.app/).
 
 
 ## Available Features
@@ -13,7 +13,17 @@ This project was Boosted with [firebase deploy](https://github.com/facebook/crea
 - SPA Application.
 - Firebase Verificaion.
 
+## Server Side
 
+- ### Nodejs
+- ### ExpressJs
+- ### mongodb
+
+- ### GET
+- ### POST
+- ### DELETE
+- ### PUT
+- ### Add Admin
 ## Technology bring to play
 
 ### HTML5 CSS3 TailwindCss
