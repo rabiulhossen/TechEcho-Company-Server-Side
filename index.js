@@ -1,13 +1,15 @@
+require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
 const port = process.env.PORT || 5000;
 const { MongoClient, ServerApiVersion, ObjectId } = require("mongodb");
-require("dotenv").config();
 
 const app = express();
 
 // middleware
-app.use(cors());
+app.use(cors({
+  origin:"https://meek-treacle-5beccb.netlify.app"
+}));
 app.use(express.json());
 
 const uri = `mongodb+srv://${process.env.USER_NAME}:${process.env.USER_PASS}@cluster0.chnht.mongodb.net/?retryWrites=true&w=majority`;
