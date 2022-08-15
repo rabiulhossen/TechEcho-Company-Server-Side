@@ -1,6 +1,6 @@
-# THIS IS MANUFECTURER COMPANY SERVER SIDE...
+## THIS IS MANUFECTURER COMPANY SERVER SIDE...
 
-# [netlify deploy](https://meek-treacle-5beccb.netlify.app/).
+## `live site👍:` [netlify deploy](https://meek-treacle-5beccb.netlify.app/).
 
 
 ## Available Features
@@ -13,24 +13,25 @@
 - SPA Application.
 - Firebase Verificaion.
 
-## Server Side
-
-- ### Nodejs
-- ### ExpressJs
-- ### mongodb
-
-- ### GET
-- ### POST
-- ### DELETE
-- ### PUT
-- ### Add Admin
 ## Technology bring to play
 
-### HTML5 CSS3 TailwindCss
-### Javascript ES6 ReactJs
-### NodeJs ExpressJs Mongodb....
+### Server Side
+- ### `Nodejs ExpressJs mongodb`
+
+- #### GET
+- #### POST
+- #### DELETE
+- #### PUT
+- #### Add Admin
+
+### client side
+#### `HTML5 CSS3 TailwindCss`
+#### `Javascript ES6 ReactJs Firebase`
+
 
 `https://ancient-hamlet-69799.herokuapp.com/`
+`admin email:yyy@yyy.yyy
+ admin pass:123456`
 
 ### If you Want run your local directory
 
